@@ -1,0 +1,533 @@
+body {
+    font-family: Source Sans Pro, Arial, Helvetica, sans-serif;
+}
+.header {
+    background-image: url(./images/pic_1.jpg);
+    background-size: cover;
+    width: 100%;
+    height: fit-content;
+}
+.header-container {
+    max-width: 90%;
+    margin-inline: auto;
+    height: 100%;
+}
+.logo-smile {
+    margin-right: 1rem;
+    max-width: 3.5rem;
+}
+.nav a {
+    color: white;
+    text-transform: uppercase;
+    font-family: Source Sans Pro, Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    margin: 0 2rem;
+}
+.nav a:hover, .nav .nav-item:active {
+    color: #C271FF;
+    text-decoration: underline;
+    text-decoration-color: white ;
+    text-decoration-thickness: 3px;
+}
+.hero-header {
+    font-family: Source Sans Pro, Arial, Helvetica, sans-serif;
+    font-weight: normal;
+}
+.hero-header h1 {
+    font-size: 7rem;
+    font-weight: bold;
+    text-transform: none;
+    color: white;
+    margin: 8rem 0 1rem 0 !important;
+}
+.hero-header h6 {
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    font-weight: normal;
+    text-align: center;
+    color: white;
+    margin-bottom: 2rem;
+}
+.hero-header .btn, .memb-section .btn {
+    color: white;
+    background-color: #C271FF;
+    max-width: 13rem;
+    border-radius: 2rem;
+    margin-inline: auto;
+    box-shadow: 0 .7rem  1rem rgba(0, 0, 0, 1);
+}
+.hero-header .btn:hover, .memb-section .btn:hover {
+    opacity: 0.9;
+}
+.col-10 h4{
+    text-align: center;
+    color: white;
+    margin: 5rem;
+    font-size: 3rem;
+    font-weight: normal;
+}
+.col-10 h4 span, .memb-section h4 span{
+    color: #C271FF;
+}
+.rounded-circle {
+    width: 12.5rem;
+    height: 12.5rem;
+}
+.pro-section figure {
+    text-align: center;
+    color: white;
+}
+.pro-section figure p {
+    font-weight: bold;
+    font-size: 20px;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+}
+.pro-section figure figcaption {
+    font-weight: normal;
+}
+/* Hamburger Menu */
+.menu-icon {
+    cursor: pointer;
+    user-select: none;
+    position: absolute;
+    left: .2rem;
+    top: .2rem;
+    padding: 2.5rem 2.5rem 2.5rem 0;
+    margin: 0;
+    display: none;
+}
+.menu-icon .nav-icon {
+    display: block;
+    background-color: white;
+    width: 1.2rem;
+    height: .2rem;
+    border-radius: 2rem;
+    position: relative;
+    transition: background 2.s ease-out;
+}
+.menu-icon .nav-icon::before, .menu-icon .nav-icon::after {
+    content: "";
+    display: block;
+    width: 130%;
+    height: 100%;
+    border-radius: 2rem;
+    position: absolute;
+    background: white;
+    transition: all .2s ease-out;
+}
+.menu-icon .nav-icon::before {
+    top: .6rem;
+}
+.menu-icon .nav-icon::after {
+    top: -.6rem;
+}
+#menu-btn {
+    display: none;
+}
+
+#menu-btn:checked ~ .menu-icon .nav-icon {
+    background: transparent;
+}
+
+#menu-btn:checked ~ .menu-icon .nav-icon::before {
+    transform: rotate(-45deg);
+}
+
+#menu-btn:checked ~ .menu-icon .nav-icon::after {
+    transform: rotate(45deg);
+}
+
+#menu-btn:checked ~ .menu-icon .nav-icon::before,
+#menu-btn:checked ~ .menu-icon .nav-icon::after {
+    top: 0;
+}
+
+/* Testimonel Section */
+.carousel {
+    background-color: #C271FF;
+    padding: 4rem;
+}
+.carousel-item {
+    margin-right: -45%;
+}
+.carousel-inner {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+.carousel-control-next-icon {
+    background-image: url(./images/arrow_white_right.png);
+    height: 4rem;
+}
+.carousel-control-prev-icon {
+    background-image: url(./images/arrow_white_left.png);
+    height: 4rem;
+}
+.carousel-item blockquote , .carousel-item blockquote footer{
+    color: white;
+    max-width: 103ch;
+}
+.blockquote {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.carousel-item .rounded-circle {
+    margin: 0 4rem;
+}
+.testimonel-text {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+}
+/* Tutorials Section */
+.tuto-section{
+    background-color: white;
+}
+.tuto-section h4 {
+    text-align: center;
+    font-size: 3rem;
+    font-weight: normal;
+    margin-bottom: 4rem;
+}
+.tuto-section h4 span {
+    color: #C271FF;
+}
+.card {
+    width: 15rem;
+    margin: 1rem;
+}
+.tuto-container {
+    display: flex;
+    flex-flow: row wrap;
+    max-width: 68rem;
+    margin-inline: auto;
+    justify-content: space-evenly;
+    
+}
+.tuto-section .carousel-item {
+    margin-right: 0;
+}
+.tuto-section .carousel-control-next-icon {
+    background-image: url(./images/arrow_black_right.png);
+    height: 4rem;
+}
+.tuto-section .carousel-control-prev-icon {
+    background-image: url(./images/arrow_black_left.png);
+    height: 4rem;
+}
+.card .auther-img {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.card .auther-img .rounded-circle {
+    height: 3rem;
+    width: 3rem;
+    
+}
+.card .auther-img .rounded-circle {
+    margin: 0.5rem 1rem;
+}
+.card .auther-img p {
+    color: #C271FF;
+    font-weight: bold;
+    margin-bottom: 0;
+}
+.card-title {
+    font-weight: bold;
+}
+.card-text {
+    color: #07162980;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1rem;
+    line-height: 1.5rem;
+}
+.card-bottom {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: center;
+    padding: 0.5rem 0.8rem;
+}
+.card-bottom img {
+    height: 1.5rem;
+    width: 1.5rem;
+}
+.play-img {
+    position: absolute;
+    z-index: 2;
+    width: 4rem;
+    height: 4rem;
+    top: 9%;
+    left: 38%;
+}
+.card-bottom p {
+    color: #C271FF;
+    font-weight: bold;
+}
+/* Membership Section */
+.memb-section {
+    background-color: #071629;
+    color: white;
+    padding: 4rem 0;
+}
+.memb-section h4 {
+    text-align: center;
+    color: white;
+    font-size: 3rem;
+    font-weight: normal;
+}
+.memb-section h4 span{
+    color: #C271FF;
+}
+.memb-offer p {
+    max-width: 25ch;
+}
+.memb-section h6 {
+    font-weight: 600;
+    font-size: 1.125rem;
+    margin: 1.5rem 0;
+}
+/* Latest Video */
+.latest-title {
+    font-size: 2rem;
+    font-weight: 300;
+    line-height: 2.5rem;
+}
+.latest-title span {
+    font-weight: bold;
+}
+/* Footer */
+.footer {
+    background-color: #071629;
+    color: white;
+    padding: 2.5rem 0 .1rem 0;
+    
+}
+.copywrite {
+    color: white;
+    font-size: 0.75rem;
+    line-height: 1rem;
+}
+.social-nav {
+    list-style: none;
+    display: flex;
+    padding: 0;
+}
+.social-link {
+    margin: 0 0.5rem;
+}
+
+/* Pricing Page */
+/* Prcing Header */
+.pricing-header {
+    background-image: url(./images/pic_2.jpg);
+    background-size: cover;
+    width: 100%;
+    max-height: 100%;
+    color: white;
+    font-family: Source Sans Pro, Arial, Helvetica, sans-serif;
+
+}
+.pricing-hero-header {
+    margin-top: 8rem;
+}
+.pricing-hero-header h1 {
+    font-size: 2rem;
+    font-weight: 400;
+    font-style: normal;
+    align-items: center;
+    line-height: 2.2rem;
+    margin-top: 10px
+}
+.smile-off-pricing {
+    width: 3.75rem;
+    height: 2.5rem;
+    margin: 0 1rem;
+}
+.pricing-main-text {
+    margin-top: 4rem;
+    font-weight: 700;
+    font-size: 3.75rem;
+    line-height: 4.714rem;
+    text-align: center;
+}
+.table {
+    color: white;
+    width: 100%;
+    height: fit-content;
+}
+.bi { /* header table icon*/
+    height: 1rem;
+    width: 1rem;
+}
+.border-bottom {
+    /* tabel border header*/
+    border-bottom: 1px solid rgba(255, 255, 255, .2) !important;
+}
+.btn {
+    background-color: #C271FF;
+    position: relative;
+}
+/* FAQ Section */
+.faq-section {
+    max-width: 70%;
+    margin-inline: auto;
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+}
+.faq-section h3 {
+    text-align: center;
+    font-weight: 300;
+    font-style: normal;
+    font-family: Source Sans Pro, Arial, Helvetica, sans-serif;
+    line-height: 4.714rem;
+    font-size: 3.75rem;
+}
+.faq-section h5 {
+    text-align: center;
+    font-family: Source Sans Pro, Arial, Helvetica, sans-serif;
+    margin-bottom: 2rem;
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1.382rem;
+}
+.faq-section p {
+    max-width: 60ch;
+    font-weight: 400;
+    font-size: 0.875rem;
+    line-height: 1.5rem;
+}
+.faq-question {
+    margin: 3rem 0;
+}
+/* Courses Page */
+.courses-header {
+    background-image: url(./images/pic_3.jpg);
+}
+.courses-header h1 {
+    color: white;
+    font-family: coiny;
+    font-weight: 400;
+    font-size: 2rem;
+    line-height: 2.2rem;
+    text-align: center;
+    padding-bottom: 3rem;
+}
+.courses-header span {
+    color: #C271FF;
+}
+
+.filter-section {
+    background-color: #C271FF;
+    padding: 3rem 0;
+
+}
+.filter-section label {
+    font-family: Source Sans Pro, Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    font-size: 0.75rem;
+    line-height: 0.943rem;
+    color: white;
+}
+.filter-section input, .filter-section select {
+    background-color: rgba(255, 255, 255, .25);
+    border-radius: 3px 3px 0 0;
+
+}
+.filter-section input:focus, .filter-section select:focus {
+    background-color: rgba(255, 255, 255, .25);
+    border-color: white;
+
+}
+.form-control {
+    color: white;
+    padding-left: 2rem;
+}
+.form-control::placeholder {
+    color: white;
+}
+option:hover {
+    box-shadow: 0 0 10px 100px red inset;
+}
+
+label + svg {
+    z-index: 3;
+    position: relative;
+    left: -2.5rem;
+    top: 2.25rem;
+
+}
+/* videos list */
+.video-section {
+    max-width: 80rem;
+    margin-inline: auto;
+}
+.video-section h6 {
+    padding-left: 1rem;
+    margin: 4rem 0;
+    color: rgba(7, 22, 41, 0.3);
+    font-family: Source Sans Pro;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.25rem;
+    letter-spacing: 0px;
+}
+
+/* Media queries */
+@media screen  and (max-width: 56.25rem){
+    .navbar {
+        flex-flow: column wrap;
+        align-items: center;
+    }
+    .nav {
+        flex-direction: column;
+        align-items: center;
+        display: none;
+    }
+    .navbar-brand {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .menu-icon {
+        display: block;
+    }
+    #menu-btn:checked ~ .nav {
+        display: flex;
+        
+    }
+    /* Testimonel Section*/
+    .carousel-item {
+        margin-right: 0;
+    }
+    .blockquote {
+        padding-right: 2rem;
+    }
+}
+@media screen and (max-width: 36.25rem) {
+    .pro-section {
+        justify-content: center !important;
+    }
+    .blockquote {
+        display: flex;
+        flex-flow: column wrap;
+        align-items: center;
+        padding-left: 2rem;
+    }
+    .testimonel-text {
+        padding-top: 2rem;
+    }
+}
+@media screen  and (max-width: 90rem) {
+    .tuto-section .carousel-control-prev {
+        justify-content: flex-start;
+    }
+    .tuto-section .carousel-control-next {
+        justify-content: flex-end;
+    }
+}
