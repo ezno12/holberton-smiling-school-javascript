@@ -1,514 +1,269 @@
-body {
-    font-family: Source Sans Pro, Arial, Helvetica, sans-serif;
-}
-.header {
-    background-image: url(./images/pic_1.jpg);
-    background-size: cover;
-    width: 100%;
-    height: fit-content;
-}
-.header-container {
-    max-width: 90%;
-    margin-inline: auto;
-    height: 100%;
-}
-.logo-smile {
-    margin-right: 1rem;
-    max-width: 3.5rem;
-}
-.nav a {
-    color: white;
-    text-transform: uppercase;
-    font-family: Source Sans Pro, Arial, Helvetica, sans-serif;
-    font-weight: 600;
-    margin: 0 2rem;
-}
-.nav a:hover, .nav .nav-item:active {
-    color: #C271FF;
-    text-decoration: underline;
-    text-decoration-color: white ;
-    text-decoration-thickness: 3px;
-}
-.hero-header {
-    font-family: Source Sans Pro, Arial, Helvetica, sans-serif;
+@font-face {
+    font-family: 'holberton_school-icon';
+    src:  url('./icons/fonts/holberton_school-icon.eot?sq4eq4');
+    src:  url('./icons/fonts/holberton_school-icon.eot?sq4eq4#iefix') format('embedded-opentype'),
+      url('./icons/fonts/holberton_school-icon.ttf?sq4eq4') format('truetype'),
+      url('./icons/fonts/holberton_school-icon.woff?sq4eq4') format('woff'),
+      url('./icons/fonts/holberton_school-icon.svg?sq4eq4#holberton_school-icon') format('svg');
     font-weight: normal;
-}
-.hero-header h1 {
-    font-size: 7rem;
-    font-weight: bold;
-    text-transform: none;
-    color: white;
-    margin: 8rem 0 1rem 0 !important;
-}
-.hero-header h6 {
-    font-size: 1.5rem;
-    text-transform: uppercase;
-    font-weight: normal;
-    text-align: center;
-    color: white;
-    margin-bottom: 2rem;
-}
-.hero-header .btn, .memb-section .btn {
-    color: white;
-    background-color: #C271FF;
-    max-width: 13rem;
-    border-radius: 2rem;
-    margin-inline: auto;
-    box-shadow: 0 .7rem  1rem rgba(0, 0, 0, 1);
-}
-.hero-header .btn:hover, .memb-section .btn:hover {
-    opacity: 0.9;
-}
-.col-10 h4{
-    text-align: center;
-    color: white;
-    margin: 5rem;
-    font-size: 3rem;
-    font-weight: normal;
-}
-.col-10 h4 span, .memb-section h4 span{
-    color: #C271FF;
-}
-.rounded-circle {
-    width: 12.5rem;
-    height: 12.5rem;
-}
-.pro-section figure {
-    text-align: center;
-    color: white;
-}
-.pro-section figure p {
-    font-weight: bold;
-    font-size: 20px;
-    margin-top: 1rem;
-    margin-bottom: 0.5rem;
-}
-.pro-section figure figcaption {
-    font-weight: normal;
-}
-/* Hamburger Menu */
-.menu-icon {
-    cursor: pointer;
-    user-select: none;
-    position: absolute;
-    left: .2rem;
-    top: .2rem;
-    padding: 2.5rem 2.5rem 2.5rem 0;
-    margin: 0;
-    display: none;
-}
-.menu-icon .nav-icon {
-    display: block;
-    background-color: white;
-    width: 1.2rem;
-    height: .2rem;
-    border-radius: 2rem;
-    position: relative;
-    transition: background 2.s ease-out;
-}
-.menu-icon .nav-icon::before, .menu-icon .nav-icon::after {
-    content: "";
-    display: block;
-    width: 130%;
-    height: 100%;
-    border-radius: 2rem;
-    position: absolute;
-    background: white;
-    transition: all .2s ease-out;
-}
-.menu-icon .nav-icon::before {
-    top: .6rem;
-}
-.menu-icon .nav-icon::after {
-    top: -.6rem;
-}
-#menu-btn {
-    display: none;
-}
+    font-style: normal;
+    font-display: block;
+  }
 
-#menu-btn:checked ~ .menu-icon .nav-icon {
-    background: transparent;
-}
-
-#menu-btn:checked ~ .menu-icon .nav-icon::before {
-    transform: rotate(-45deg);
-}
-
-#menu-btn:checked ~ .menu-icon .nav-icon::after {
-    transform: rotate(45deg);
-}
-
-#menu-btn:checked ~ .menu-icon .nav-icon::before,
-#menu-btn:checked ~ .menu-icon .nav-icon::after {
-    top: 0;
-}
-
-/* Testimonel Section */
-.carousel {
-    background-color: #C271FF;
-    padding: 4rem;
-}
-.carousel-item {
-    margin-right: -45%;
-}
-.carousel-inner {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-}
-.carousel-control-next-icon {
-    background-image: url(./images/arrow_white_right.png);
-    height: 4rem;
-}
-.carousel-control-prev-icon {
-    background-image: url(./images/arrow_white_left.png);
-    height: 4rem;
-}
-.carousel-item blockquote , .carousel-item blockquote footer{
-    color: white;
-    max-width: 103ch;
-}
-.blockquote {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
-.carousel-item .rounded-circle {
-    margin: 0 4rem;
-}
-.testimonel-text {
-    display: flex;
-    flex-flow: column wrap;
-    justify-content: center;
-}
-/* Tutorials Section */
-.tuto-section{
-    background-color: white;
-}
-.tuto-section h4 {
-    text-align: center;
-    font-size: 3rem;
-    font-weight: normal;
-    margin-bottom: 4rem;
-}
-.tuto-section h4 span {
-    color: #C271FF;
-}
-.card {
-    width: 15rem;
-    margin: 1rem;
-}
-.tuto-container {
-    display: flex;
-    flex-flow: row wrap;
-    max-width: 68rem;
-    margin-inline: auto;
-    justify-content: space-evenly;
-    
-}
-.tuto-section .carousel-item {
-    margin-right: 0;
-}
-.tuto-section .carousel-control-next-icon {
-    background-image: url(./images/arrow_black_right.png);
-    height: 4rem;
-}
-.tuto-section .carousel-control-prev-icon {
-    background-image: url(./images/arrow_black_left.png);
-    height: 4rem;
-}
-.card .auther-img {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-}
-.card .auther-img .rounded-circle {
-    height: 3rem;
-    width: 3rem;
-    
-}
-.card .auther-img .rounded-circle {
-    margin: 0.5rem 1rem;
-}
-.card .auther-img p {
-    color: #C271FF;
-    font-weight: bold;
-    margin-bottom: 0;
-}
-.card-title {
-    font-weight: bold;
-}
-.card-text {
-    color: #07162980;
+  [class^="holberton_school-icon-"], [class*=" holberton_school-icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'holberton_school-icon' !important;
     font-style: normal;
     font-weight: normal;
-    font-size: 1rem;
-    line-height: 1.5rem;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  .holberton_school-icon-arrow_1:before {
+    content: "\e900";
+  }
+  .holberton_school-icon-arrow_2:before {
+    content: "\e901";
+  }
+  .holberton_school-icon-arrow_3:before {
+    content: "\e902";
+  }
+  .holberton_school-icon-arrow_4:before {
+    content: "\e903";
+  }
+  .holberton_school-icon-arrow_5:before {
+    content: "\e904";
+  }
+  .holberton_school-icon-check:before {
+    content: "\e905";
+  }
+  .holberton_school-icon-ic_bag:before {
+    content: "\e906";
+  }
+  .holberton_school-icon-ic_cart:before {
+    content: "\e907";
+  }
+  .holberton_school-icon-ic_facebook:before {
+    content: "\e908";
+  }
+  .holberton_school-icon-ic_hearing:before {
+    content: "\e909";
+  }
+  .holberton_school-icon-ic_instagram:before {
+    content: "\e90a";
+  }
+  .holberton_school-icon-ic_laptop:before {
+    content: "\e90b";
+  }
+  .holberton_school-icon-ic_money:before {
+    content: "\e90c";
+  }
+  .holberton_school-icon-ic_music:before {
+    content: "\e90d";
+  }
+  .holberton_school-icon-ic_sound:before {
+    content: "\e90e";
+  }
+  .holberton_school-icon-ic_twitter:before {
+    content: "\e90f";
+  }
+  .holberton_school-icon-ic_video:before {
+    content: "\e910";
+  }
+  .holberton_school-icon-menu:before {
+    content: "\e911";
+  }
+  .holberton_school-icon-search_1:before {
+    content: "\e912";
+  }
+  .holberton_school-icon-search_2:before {
+    content: "\e913";
+  }
+  .holberton_school-icon-star:before {
+    content: "\e914";
+  }
+
+:root {
+    --max-width: 1150px;
+    --purple-color: #C271FF;
+    --blue-color: #071629;
+    --section-padding: 90px 0;
+    --table-row-bottom-border: 1px solid #394454;
+    --green-color: #82D24F;
+    --black-color: #071629;
+    --pale-purple-color: #d194fd;
+    --search-border-color: #eacffe;
 }
-.card-bottom {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-content: center;
-    padding: 0.5rem 0.8rem;
-}
-.card-bottom img {
-    height: 1.5rem;
-    width: 1.5rem;
-}
-.play-img {
-    position: absolute;
-    z-index: 2;
-    width: 4rem;
-    height: 4rem;
-    top: 9%;
-    left: 38%;
-}
-.card-bottom p {
-    color: #C271FF;
-    font-weight: bold;
-}
-/* Membership Section */
-.memb-section {
-    background-color: #071629;
+
+* {
+    font-family: 'Source sans pro', 'Spin Cycle', 'holberton_school-icon', 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif !important;
     color: white;
-    padding: 4rem 0;
 }
-.memb-section h4 {
-    text-align: center;
-    color: white;
-    font-size: 3rem;
-    font-weight: normal;
+
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
 }
-.memb-section h4 span{
-    color: #C271FF;
+
+/* ---------- HOMEPAGE ----------  */
+/*  HERO SECTION */
+.hero-section {
+    background-image: url('./images/pic_1.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 }
-.memb-offer p {
-    max-width: 25ch;
+
+main.pricing-main .hero-section {
+  background-image: url('./images/pic_2.jpg');
 }
-.memb-section h6 {
-    font-weight: 600;
-    font-size: 1.125rem;
-    margin: 1.5rem 0;
+
+main.courses-main .hero-section {
+  background-image: url('./images/pic_3.jpg');
 }
-/* Latest Video */
-.latest-title {
-    font-size: 2rem;
-    font-weight: 300;
-    line-height: 2.5rem;
+
+.header {
+    max-width: var(--max-width);
+    margin: auto;
 }
-.latest-title span {
-    font-weight: bold;
+
+.nav-btn {
+    display: none;
 }
-/* Footer */
-.footer {
-    background-color: #071629;
-    color: white;
-    padding: 2.5rem 0 .1rem 0;
-    
+
+#small-nav-handler {
+    display: none;
 }
-.copywrite {
-    color: white;
-    font-size: 0.75rem;
-    line-height: 1rem;
+
+.logo-container {
+    float: left;
 }
-.social-nav {
+
+.logo-container img {
+    height: 2rem;
+}
+
+.logo-container img:first-child {
+    margin-right: 1rem;
+}
+
+.nav-list {
     list-style: none;
     display: flex;
-    padding: 0;
-}
-.social-link {
-    margin: 0 0.5rem;
-}
-
-/* Pricing Page */
-/* Prcing Header */
-.pricing-header {
-    background-image: url(./images/pic_2.jpg);
-    background-size: cover;
-    width: 100%;
-    max-height: 100%;
-    color: white;
-    font-family: Source Sans Pro, Arial, Helvetica, sans-serif;
-
-}
-.pricing-hero-header {
-    margin-top: 8rem;
-}
-.pricing-hero-header h1 {
-    font-size: 2rem;
-    font-weight: 400;
-    font-style: normal;
+    justify-content: right;
     align-items: center;
-    line-height: 2.2rem;
-    margin-top: 10px
+    float: right;
 }
-.smile-off-pricing {
-    width: 3.75rem;
-    height: 2.5rem;
-    margin: 0 1rem;
-}
-.pricing-main-text {
-    margin-top: 4rem;
-    font-weight: 700;
-    font-size: 3.75rem;
-    line-height: 4.714rem;
-    text-align: center;
-}
-.table {
+
+.nav-list li a {
+    font-weight: bold;
+    text-decoration: none;
     color: white;
-    width: 100%;
-    height: fit-content;
+    margin-left: 2rem;
 }
-.bi { /* header table icon*/
-    height: 1rem;
-    width: 1rem;
+
+.nav-list li a.active {
+  color: var(--purple-color);
+  border-bottom: 2px solid white;
+  padding-bottom: 4px;
 }
-.border-bottom {
-    /* tabel border header*/
-    border-bottom: 1px solid rgba(255, 255, 255, .2) !important;
+
+.big-title {
+    font-size: 5rem;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    margin: 5rem auto -1rem;
 }
+
+.subtitles {
+    color: white
+}
+
 .btn {
-    background-color: #C271FF;
-    position: relative;
-}
-/* FAQ Section */
-.faq-section {
-    max-width: 70%;
-    margin-inline: auto;
-    margin-top: 4rem;
-    margin-bottom: 4rem;
-}
-.faq-section h3 {
-    text-align: center;
-    font-weight: 300;
-    font-style: normal;
-    font-family: Source Sans Pro, Arial, Helvetica, sans-serif;
-    line-height: 4.714rem;
-    font-size: 3.75rem;
-}
-.faq-section h5 {
-    text-align: center;
-    font-family: Source Sans Pro, Arial, Helvetica, sans-serif;
-    margin-bottom: 2rem;
-    font-size: 1rem;
-    font-weight: 700;
-    line-height: 1.382rem;
-}
-.faq-section p {
-    max-width: 60ch;
-    font-weight: 400;
-    font-size: 0.875rem;
-    line-height: 1.5rem;
-}
-.faq-question {
-    margin: 3rem 0;
-}
-/* Courses Page */
-.courses-header {
-    background-image: url(./images/pic_3.jpg);
-}
-.courses-header h1 {
-    color: white;
-    font-family: coiny;
-    font-weight: 400;
-    font-size: 2rem;
-    line-height: 2.2rem;
-    text-align: center;
-    padding-bottom: 3rem;
-}
-.courses-header span {
-    color: #C271FF;
+    background-color: var(--purple-color) !important;
+    display: block;
 }
 
-.filter-section {
-    background-color: #C271FF;
-    padding: 3rem 0;
-
-}
-.filter-section label {
-    font-family: Source Sans Pro, Arial, Helvetica, sans-serif;
-    font-weight: 700;
-    font-size: 0.75rem;
-    line-height: 0.943rem;
-    color: white;
-}
-.filter-section input, .filter-section select {
-    background-color: rgba(255, 255, 255, .25);
-    border-radius: 3px 3px 0 0;
-
-}
-.filter-section input:focus, .filter-section select:focus {
-    background-color: rgba(255, 255, 255, .25);
-    border-color: white;
-
-}
-.form-control {
-    color: white;
-    padding-left: 2rem;
-}
-.form-control::placeholder {
-    color: white;
-}
-option:hover {
-    box-shadow: 0 0 10px 100px red inset;
+.purple-text {
+    color: var(--purple-color);
 }
 
-label + svg {
-    z-index: 3;
-    position: relative;
-    left: -2.5rem;
-    top: 2.25rem;
-
-}
-/* videos list */
-.video-section {
-    max-width: 80rem;
-    margin-inline: auto;
-}
-.video-section h6 {
-    padding-left: 1rem;
-    margin: 4rem 0;
-    color: rgba(7, 22, 41, 0.3);
-    font-family: Source Sans Pro;
-    font-size: 1rem;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 1.25rem;
-    letter-spacing: 0px;
+.small-title {
+    margin-top: 10rem;
+    margin-bottom: 5rem;
 }
 
-/* Media queries */
-@media screen  and (max-width: 56.25rem){
-    .navbar {
-        flex-flow: column wrap;
-        align-items: center;
-    }
-    .nav {
-        flex-direction: column;
-        align-items: center;
-        display: none;
-    }
-    .navbar-brand {
+.testimonials img {
+    width: 125px;
+    height: 125px;
+}
+
+@media screen and (max-width: 576px) {
+    .logo-container {
+        float: none;
+        margin: auto;
         display: flex;
         flex-direction: column;
         align-items: center;
+        max-width: 180px;
     }
-    .menu-icon {
+
+    .logo-container img:first-child {
+        margin-right: 0;
+        margin-bottom: 1rem;
+        max-width: 42px;
+    }
+
+    .nav-btn {
+        float: left;
+        display: block;
+        height: 3px;
+        width: 1.35rem;
+        background-color: white;
+        margin-top: 1rem;
+    }
+
+    .nav-btn::before {
+        content: '';
+        display: block;
+        height: 3px;
+        width: 2rem;
+        margin-top: 10px;
+        background-color: white;
+    }
+
+    .nav-btn::after {
+        content: '';
+        display: block;
+        height: 3px;
+        width: 2rem;
+        margin-top: -23px;
+        background-color: white;
+    }
+
+    .nav-list {
+        display: none;
+        float: none;
+        text-align: center;
+        margin: 5rem auto;
+    }
+
+    .nav-list li {
+        margin-bottom: 1rem;
+    }
+
+    input#small-nav-handler:checked ~ .nav-list {
         display: block;
     }
-    #menu-btn:checked ~ .nav {
-        display: flex;
-        
-    }
-    /* Testimonel Section*/
-    .carousel-item {
-        margin-right: 0;
-    }
-    .blockquote {
-        padding-right: 2rem;
-    }
 }
+
+/* Quotes CAROUSEL SECTION */
 .loader {
     border: 10px solid #f3f3f3;
     border-top: 10px solid #C271FF;
@@ -523,25 +278,280 @@ label + svg {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
 }
-@media screen and (max-width: 36.25rem) {
-    .pro-section {
-        justify-content: center !important;
-    }
-    .blockquote {
-        display: flex;
-        flex-flow: column wrap;
-        align-items: center;
-        padding-left: 2rem;
-    }
-    .testimonel-text {
-        padding-top: 2rem;
-    }
+
+.quotes-section {
+    background-color: var(--purple-color);
+    padding: var(--section-padding);
 }
-@media screen  and (max-width: 90rem) {
-    .tuto-section .carousel-control-prev {
-        justify-content: flex-start;
-    }
-    .tuto-section .carousel-control-next {
-        justify-content: flex-end;
-    }
+
+.quotes-section img {
+    width: 125px;
+    height: 125px;
+}
+
+.carousel-item-content {
+    padding-right: 80px;
+    padding-left: 80px;
+}
+
+
+/* COMMON SECTION STYLING */
+
+.section-title {
+  margin-bottom: 70px;
+}
+
+/* Videos CAROUSEL SECTION */
+
+.tutorial-section {
+  padding: var(--section-padding);
+}
+
+.video-carousel-img-profile {
+    height: 30px;
+    width: 30px;
+}
+
+.carousel-star-icon {
+    height: 1rem;
+    width: 1rem;
+}
+
+.videos-slides-container {
+  padding: 0 100px;
+}
+
+.videos-slides-container .carousel-inner {
+  flex-basis: 50% !important;
+}
+
+/* FREE MEMBERSHIP SECTION */
+
+.free-membership-section {
+  background-color: var(--blue-color);
+  padding: var(--section-padding);
+}
+
+.free-membership-section > div > div {
+  margin-bottom: 60px;
+}
+
+.free-membership-section .free-membership-item-description {
+  max-width: 250px;
+}
+
+/* FOOTER */
+
+footer {
+  background-color: var(--blue-color);
+  padding: var(--section-padding);
+}
+
+footer .logo-container {
+  float: none;
+}
+
+footer > div:first-child {
+  margin-bottom: 50px;
+}
+
+footer > div:last-child {
+  opacity: 35%;
+}
+
+.social-media-icons > div:first-child{
+  width: 130px;
+  max-width: 130px;
+}
+
+.social-media-icons i {
+  font-size: 30px;
+  color: white;
+}
+
+.social-media-icons i:not(:first-child) {
+  margin-left: 20px;
+}
+
+/* ---------- PRICING PAGE ----------  */
+
+/* HERO Section */
+.text-logo {
+  margin-top: 200px;
+  flex-wrap: wrap;
+}
+
+/* Pricing Table styling */
+.th-title {
+  font-size: 44px;
+}
+
+.table-btn {
+  padding: 13px 36px;
+}
+
+table .table-btn {
+  min-width: 180px;
+}
+
+.table-subtitle {
+  font-size: 12px;
+  opacity: 50%;
+  font-weight: 400;
+}
+
+.tr-title {
+  font-weight: 400 !important;
+  font-size: 18px;
+}
+
+.bordered-table-row {
+  border-bottom: var(--table-row-bottom-border);
+}
+
+.table td, .table th {
+  padding: 1.25rem;
+}
+
+table i {
+  color: var(--green-color);
+  font-size: 28px;
+}
+
+tbody tr:first-child {
+  display: none;
+}
+
+@media screen and (max-width: 576px) {
+
+  thead {
+    display: none;
+  }
+
+  tbody tr:first-child {
+    display: table-row;
+  }
+
+  tbody tr:first-child td {
+    font-size: 12px;
+    font-weight: bold;
+    min-width: 95px;
+    padding-bottom: 0px;
+  }
+}
+
+/* FAQ Section */
+
+.faq-section {
+  padding: var(--section-padding);
+}
+
+.faq-section h1, .faq-section h2, .faq-section .faq-answer {
+  color: var(--black-color) !important;
+}
+
+.faq-section h1 {
+  font-size: 60px !important;
+  margin-bottom: 75px;
+}
+
+.one-faq h2 {
+  margin-left: -2px !important;
+}
+
+.faq-section .faq-answer {
+  font-weight: 14px;
+  opacity: 50%;
+  margin-bottom: 75px;
+  text-align: justify;
+}
+
+/* --------- COURSES PAGE ---------- */
+
+/* HERO Section */
+.pricing-page-title {
+  font-size: 32px !important;
+  font-family: Coiny !important;
+  margin-bottom: 0px;
+}
+
+.pricing-page-title span {
+  font-family: inherit !important;
+}
+
+/* SEARCH Filters */
+
+.courses-p-body {
+  height: 100vh;
+}
+
+.search-filters {
+  background-color: var(--purple-color);
+}
+
+.search-filters  .search-element {
+  border-bottom: 1px solid !important;
+  border-color: var(--search-border-color) !important;
+}
+
+.search-filters label {
+  font-weight: bolder;
+  font-size: 12px !important;
+}
+
+.search-filters input {
+  background-color: var(--pale-purple-color);
+  font-size: 24px;
+  opacity: 75%;
+  color: black !important;
+  padding-left: 40px;
+}
+
+.input-icon {
+  font-size: 22px;
+  font-weight: bold;
+  position: absolute;
+  top: 46px;
+  left: 22px;
+}
+
+.search-filters input:focus {
+  color: black;
+}
+
+.search-filters input:focus ~ .input-icon {
+  /* display: none; */
+  color: var(--black-color);
+}
+
+.search-filters input::placeholder {
+  color: white;
+  font-size: 24px;
+  opacity: 50%;
+}
+
+/* Dropdown search */
+
+.dropdown button {
+  font-size: 23px;
+  font-weight: lighter;
+}
+
+.dropdown button.search-element:first-child {
+  background-color: var(--pale-purple-color) !important;
+}
+.dropdown button:first-child::after {
+  content: "\e904";
+  color: white;
+  font-size: 22px;
+  float: right;
+  margin-top: 2px;
+}
+
+.dropdown-menu {
+  width: 100%;
+}
+
+.dropdown-menu button:hover {
+  color: var(--purple-color);
 }
